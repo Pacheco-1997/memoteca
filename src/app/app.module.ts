@@ -3,16 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [ // a parte de declarations é para declarar todao os componentes, direrivas, pipes e etc... 
+    AppComponent, 
+    CabecalhoComponent,
   ],
-  imports: [
+  imports: [  // aqui é declarado os modulos que vou usar nesse aqui, seja de biblioteca ou da minha aplicacao 
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [], // aqui ficam os servicos que serao usados no modulo
+  bootstrap: [AppComponent], // aqui eu seto os componentes que serao inicializados quando eu der start nesse modulo 
+  exports:[] // aqui eu declaro as coisas do meu modulo que eu quero exportar 
 })
 export class AppModule { }
